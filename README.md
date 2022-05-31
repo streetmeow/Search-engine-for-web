@@ -8,14 +8,16 @@
 해당 엔진은 도커 설치를 지원합니다. 방법은 하단에 표시합니다. 
 
 # 도커 설치
+docker-compose.yml 파일을 우분투 임의의 디렉토리에 넣고 동일 디렉토리에서 아래의 명령어 차례대로 실행
 ```console
-doker pull
+$ sudo docker-compose pull
+$ sudo docker-compose -f docker-compose.yml up -d
 ```
 
 # 직접 설치
 직접 코드 수정을 희망하실 경우 하단의 라이브러리 및 프로그램을 설치 바랍니다. 
 
-_⚠ Python 3.6+, Ubuntu 18.04+ 필수_
+_⚠ Python 3.6+ 필수, Ubuntu 18.04+ 권장_
 
 
 

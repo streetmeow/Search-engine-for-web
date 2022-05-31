@@ -14,7 +14,7 @@ services:
 
   elasticsearch:
     container_name: elasticsearch
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.0
+    image: streetmeow/elasticsearch-nori:latest
     restart: always
     ports:
       - 9200:9200
