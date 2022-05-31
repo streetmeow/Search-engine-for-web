@@ -12,7 +12,7 @@ except:
 
 setuptools.setup(
     name="easy-search-engine",
-    version="1.0.0",
+    version="0.1.0",
     author="Joohee Cho",
     author_email="joohee2008@cau.ac.kr",
     description="Easy Search Engine for personal websites etc..",
