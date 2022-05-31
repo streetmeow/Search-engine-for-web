@@ -1,5 +1,6 @@
 from uvicorn import run
 from fastapi import FastAPI
+from elasticsearch import Elasticsearch
 from pydantic import BaseModel
 from os import environ
 
