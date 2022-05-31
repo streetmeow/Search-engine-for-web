@@ -18,7 +18,7 @@ setuptools.setup(
     description="Easy Search Engine for personal websites etc..",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/streetmeow",
+    url="https://github.com/streetmeow/Search-engine-for-web",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.7",
