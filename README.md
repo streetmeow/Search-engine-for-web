@@ -1,2 +1,35 @@
-# Search-engine-for-web
-Search engine and database source code
+<h1 align="center">Easy Search Engine</h1>
+<p align="center">Search engine backend for easy build</p>
+
+<h2 align="center">Description</h2>
+해당 프로그램은 웹사이트 또는 블로그를 직접 구축하는 사람들이 쉽게 빠르고 정확한 검색엔진 및 게시글 저장 백엔드를 구축하도록 해줍니다. 
+
+<h2 align="center">Install</h2>
+해당 엔진은 도커 설치를 지원합니다. 방법은 하단에 표시합니다. 
+
+# 도커 설치
+```console
+doker pull
+```
+
+# 직접 설치
+직접 코드 수정을 희망하실 경우 하단의 라이브러리 및 프로그램을 설치 바랍니다. 
+
+_⚠ Python 3.6+, Ubuntu 18.04+ 필수_
+
+
+
+### 파이썬 패키지
+
+#### [fastapi](https://pypi.org/project/fastapi/)
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
+
+#### [pymysql](https://pypi.org/project/PyMySQL/)
+This package contains a pure-Python MySQL client library, based on PEP 249.
+
+#### [elasticsearch](https://pypi.org/project/elasticsearch/)
+The official Python client for Elasticsearch.
+
+#### [uvicorn](https://pypi.org/project/uvicorn/)
+Uvicorn is an ASGI web server implementation for Python.
+
