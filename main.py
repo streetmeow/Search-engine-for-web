@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from os import environ
 from searchengine import *
 
-app = FastAPI()
+app = FastAPI(title="Easy Search Engine", description="Easy Search Engine for backend users", version="0.3.0")
 es = Elasticsearch(environ.get("ES_HOST", "http://0.0.0.0:9200"))
 index = environ.get("ES_INDEX", "posts")
 es_create(index_name=index, es=es)
@@ -55,6 +55,34 @@ async def insert_item(item: Insert = Body(
     """
     result = insert_data(_id=item.id, author=item.author, title=item.title, text=item.text, directory=item.directory,
                          index=index, es=es)
+    return result
+
+
+@app.post("/update/")
+async def update_item(item: Insert = Body(
+    example={
+        "id": "unique 한 id 값 (data sync 를 위해 입력 받으며, update, delete 에 필요. str)",
+        "author": "작성자",
+        "title": "글 제목",
+        "text": "글 내용",
+        "directory": "글 위치 또는 카테고리"
+    }
+)):
+    """
+    기존값 업데이트. id 기준으로 수정하며, author, title, text, directory 모두 새로 입력해야 함
+    return:
+        성공 시 True, 실패 시 False
+    """
+    result = update_data(data=item, index=index, es=es)
+    return result
+
+
+@app.get("/delete/")
+def delete_item(_id: str):
+    """
+    id 값 입력 시 해당 도큐먼트 삭제
+    """
+    result = delete_data(_id=_id, index=index, es=es)
     return result
 
 
