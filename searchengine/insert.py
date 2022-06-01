@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 def insert_data(_id, author, title, text, directory, index, es):
-    date = datetime.now(tz)
+    date = datetime.now()
     doc = {
         "date": date,
         "author": author,

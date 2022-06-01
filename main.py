@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from os import environ
 from searchengine import *
 
-app = FastAPI(title="Easy Search Engine", description="Easy Search Engine for backend users", version="0.3.1")
+app = FastAPI(title="Easy Search Engine", description="Easy Search Engine for backend users", version="1.0.0")
 es = Elasticsearch("http://0.0.0.0:9200")
 index = "posts"
 es_create(index_name=index, es=es)

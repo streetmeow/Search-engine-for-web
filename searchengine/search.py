@@ -15,7 +15,7 @@ def search_data(data, index, es):
                 "match": {
                     "title": {
                         "query": data.title,
-                        "boost": 2
+                        "boost": 3
                     }
                 }
             }
