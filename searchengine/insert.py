@@ -1,9 +1,7 @@
 from datetime import datetime
-import pytz
 
 
 def insert_data(_id, author, title, text, directory, index, es):
-    tz = pytz.timezone("Asia/Seoul")
     date = datetime.now(tz)
     doc = {
         "date": date,

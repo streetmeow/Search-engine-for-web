@@ -7,12 +7,12 @@ try:
     with open('requirements.txt', encoding="utf-8") as fr:
         reqs = fr.read().strip().split('\n')
 except:
-    reqs = ["elasticsearch", "uvicorn[standard]", "fastapi", "pytz"]
+    reqs = ["elasticsearch", "uvicorn[standard]", "fastapi"]
 
 
 setuptools.setup(
     name="easy-searchengine",
-    version="0.3.0",
+    version="1.0.0",
     author="Joohee Cho",
     author_email="joohee2008@cau.ac.kr",
     description="Easy Search Engine for personal websites etc..",

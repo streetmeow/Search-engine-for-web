@@ -6,9 +6,9 @@ from pydantic import BaseModel
 from os import environ
 from searchengine import *
 
-app = FastAPI(title="Easy Search Engine", description="Easy Search Engine for backend users", version="0.3.0")
-es = Elasticsearch(environ.get("ES_HOST", "http://0.0.0.0:9200"))
-index = environ.get("ES_INDEX", "posts")
+app = FastAPI(title="Easy Search Engine", description="Easy Search Engine for backend users", version="0.3.1")
+es = Elasticsearch("http://0.0.0.0:9200")
+index = "posts"
 es_create(index_name=index, es=es)
 
 
@@ -108,7 +108,7 @@ async def search_item(data: Search = Body(
 
 
 if __name__ == "__main__":
-    host = environ.get("HOST", "0.0.0.0")
-    port = int(environ.get("PORT", "8080"))
-    workers = int(environ.get("WORKERS", "1"))
-    run("main:app", host="0.0.0.0", port=port, reload=True, workers=workers)
+    host = "0.0.0.0"
+    port = 8080
+    workers = 1
+    run("main:app", host=host, port=port, reload=True, workers=workers)

@@ -1,4 +1,4 @@
-fastapi
-uvicorn[standard]
-elasticsearch
-pytz
+pydantic
+uvicorn==0.17.0
+elasticsearch==7.15.0
+fastapi==0.78.0

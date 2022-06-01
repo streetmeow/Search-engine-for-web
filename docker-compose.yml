@@ -16,7 +16,7 @@ services:
 
   kibana:
     container_name: kibana
-    image: docker.elastic.co/kibana/kibana:7.11.0
+    image: docker.elastic.co/kibana/kibana:7.15.0
     restart: always
     ports:
     - 5601:5601
@@ -25,4 +25,3 @@ services:
     privileged: true
     depends_on:
       - elasticsearch
-
