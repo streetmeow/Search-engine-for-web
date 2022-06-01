@@ -7,7 +7,7 @@
 <h2 align="center">설치 방법</h2>
 해당 엔진은 부분적으로 도커 설치를 지원합니다. 방법은 하단에 표시합니다. 
 
-docker-compose.yml 파일을 우분투 임의의 디렉토리에 넣고 동일 디렉토리에서 아래의 명령어 차례대로 실행
+docker-compose.yml 파일을 포함한 해당 프로젝트 폴더를 우분투 임의의 디렉토리에 넣고 docker-compose.yml이 있는 디렉토리에서 아래의 명령어 차례대로 실행
 ```console
 $ sudo docker-compose pull
 $ sudo docker-compose -f docker-compose.yml up -d
