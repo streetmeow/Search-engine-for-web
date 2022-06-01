@@ -2,7 +2,7 @@
 <p align="center">Search engine backend for easy build</p>
 
 <h2 align="center">Description</h2>
-해당 프로그램은 웹사이트 또는 블로그를 직접 구축하는 사람들이 쉽게 빠르고 정확한 검색엔진 및 게시글 저장 백엔드를 구축하도록 해줍니다. 
+해당 프로그램은 웹사이트 또는 블로그를 직접 구축하는 사람들이 쉽게 빠르고 정확한 게시글 검색엔진 백엔드를 구축하도록 해줍니다. 
 
 <h2 align="center">Install</h2>
 해당 엔진은 도커 설치를 지원합니다. 방법은 하단에 표시합니다. 

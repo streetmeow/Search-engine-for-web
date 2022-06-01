@@ -2,9 +2,13 @@ from uvicorn import run
 from fastapi import FastAPI
 from elasticsearch import Elasticsearch
 from pydantic import BaseModel
+import pymysql
 from os import environ
+from searchengine import *
 
 app = FastAPI()
+es = Elasticsearch(environ.get("ES_HOST", "http://0.0.0.0:9200"))
+es_create(index_name=environ.get("ES_INDEX", "posts"), es=es)
 
 
 @app.get("/health/")

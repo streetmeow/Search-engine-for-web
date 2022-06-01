@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  mysql:
-    container_name: mysql
-    image: mysql:5.7
-    restart: always
-    command:
-    - --default-authentication-plugin=mysql_native_password
-    - --character-set-server=utf8mb4
-    - --collation-server=utf8mb4_unicode_ci
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-
   elasticsearch:
     container_name: elasticsearch
     image: streetmeow/elasticsearch-nori:latest
@@ -36,7 +25,4 @@ services:
     privileged: true
     depends_on:
       - elasticsearch
-
-
-
 
